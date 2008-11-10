@@ -8,9 +8,9 @@ type @adduser deploy@
 
 Command will ask you for a new password. Go ahead and choose one. You can safely choose default user information (blank).
 
-Now you need to setup sudo for the deploy user. Enter this command:
+Now you need to setup sudo for the deploy user.
 
-@visudo@
+type @visudo@
 
 Add the following text to bottom of file:
 
