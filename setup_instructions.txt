@@ -23,6 +23,24 @@ $ sudo -s (enter password when prompted)
 
 ### TODO - Firewall ###
 
+6. Copy bash settings to your home directory
+$ cat .bash_profile >> ~/.bash_profile
+$ source ~/.bash_profile
+
+7. update and upgrade installed packages
+$ update
+$ upgrade
+
+8. Install and set locales
+$ install locales
+$ sudo dpkg-reconfigure locales
+
+9. Install screen
+$ install screen
+
+10. Install build tools
+$ install build-essential
+
 === Resources ===
 * http://articles.slicehost.com/2007/9/5/debian-etch-setup-page-1
 * http://articles.slicehost.com/2007/9/5/debian-etch-setup-page-2
