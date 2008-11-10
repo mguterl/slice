@@ -1,11 +1,15 @@
 h1. Setup steps
 
-# First we add the deploy user. Command will ask you for a new password. Go ahead and choose one. You can safely choose default user information (blank).
+h2. First we add the deploy user. Command will ask you for a new password. Go ahead and choose one. You can safely choose default user information (blank).
+
 @adduser deploy@
 
-2. Setup sudo for the deploy user
-# visudo
-| deploy ALL=(ALL) ALL
+# Setup sudo for the deploy user
+@visudo@
+
+Add the following text to bottom of file
+
+@deploy ALL=(ALL) ALL@
 
 3. Copy SSH public key from local machine to server (replace X's with your slice information)
 $ scp ~/.ssh/id_dsa.pub deploy@XXX.XX.XXX.XX:
