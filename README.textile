@@ -16,6 +16,8 @@ Add the following text to bottom of file:
 
 @deploy ALL=(ALL) ALL@
 
+You can confirm you got sudo setup properly by typing @cat /etc/sudoers@ and ensuring that the deploy line you added is at the bottom of the output
+
 ---
 
 3. Copy SSH public key from local machine to server (replace X's with your slice information)
