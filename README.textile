@@ -20,8 +20,13 @@ You can confirm you got sudo setup properly by typing @cat /etc/sudoers@ and ens
 
 ---
 
-3. Copy SSH public key from local machine to server (replace X's with your slice information)
-$ scp ~/.ssh/id_dsa.pub deploy@XXX.XX.XXX.XX:
+h2. SSH public key
+
+You need to copy a SSH public key from your local machine to the server. You need to have created SSH key first.
+
+type @scp ~/.ssh/id_dsa.pub deploy@XXX.XXX.XXX.XXX@ (replace X's with your slice IP) 
+
+---
 
 4. Add public key to authorized keys and set permissions
 $ mkdir ~/.ssh
