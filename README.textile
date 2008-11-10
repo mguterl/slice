@@ -26,17 +26,13 @@ type @scp ~/.ssh/id_dsa.pub deploy@XXX.XXX.XXX.XXX@ (replace X's with your slice
 
 Add public key to authorized keys and set permissions
 
-<pre><code>
-mkdir ~/.ssh
+<pre><code>mkdir ~/.ssh
 touch ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 cat ~/id_dsa.pub >> ~/.ssh/authorized_keys
-rm ~/id_dsa.pub
-</code></pre>
+rm ~/id_dsa.pub</code></pre>
 
-
-
-5. Configure the SSH daemon to be more secure
+h2. Configure the SSH daemon to be more secure
 $ sudo -s (enter password when prompted)
 # cp etc/ssh/sshd_config /etc/ssh/sshd_config
 # /etc/init.d/ssh restart
