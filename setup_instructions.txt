@@ -1,13 +1,13 @@
 === Steps ===
 1. First we add the deploy user
-# adduser deploy (password N[Hxie!P)
+# adduser deploy
 
 2. Setup sudo for the deploy user
 # visudo
 | deploy ALL=(ALL) ALL
 
-3. Copy SSH public key from local machine to server
-$ scp ~/.ssh/id_dsa.pub deploy@173.45.227.57:
+3. Copy SSH public key from local machine to server (replace X's with your slice information)
+$ scp ~/.ssh/id_dsa.pub deploy@XXX.XX.XXX.XX:
 
 4. Add public key to authorized keys and set permissions
 $ mkdir ~/.ssh
