@@ -26,11 +26,13 @@ type @scp ~/.ssh/id_dsa.pub deploy@XXX.XXX.XXX.XXX@ (replace X's with your slice
 
 Add public key to authorized keys and set permissions
 
-@mkdir ~/.ssh@
-@touch ~/.ssh/authorized_keys@
-@chmod 600 ~/.ssh/authorized_keys@
-@cat ~/id_dsa.pub >> ~/.ssh/authorized_keys@
-@rm ~/id_dsa.pub@
+<pre><code>
+mkdir ~/.ssh
+touch ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+cat ~/id_dsa.pub >> ~/.ssh/authorized_keys
+rm ~/id_dsa.pub
+</code></pre>
 
 
 
