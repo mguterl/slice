@@ -1,0 +1,1 @@
+net eth0 detect routefilter,norfc1918,logmartians,nosmurfs,tcpflags,blacklist 

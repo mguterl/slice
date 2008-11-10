@@ -1,0 +1,4 @@
+#SOURCE ZONE   DESTINATION ZONE   POLICY   LOG LEVEL   LIMIT:BURST
+$FW            net                ACCEPT
+net            all                DROP     info
+all            all                REJECT   info
