@@ -21,8 +21,6 @@ $ sudo -s (enter password when prompted)
 # cp etc/ssh/sshd_config /etc/ssh/sshd_config
 # /etc/init.d/ssh restart
 
-### TODO - Firewall ###
-
 6. Copy bash settings to your home directory
 $ cat .bash_profile >> ~/.bash_profile
 $ source ~/.bash_profile
@@ -40,6 +38,16 @@ $ install screen
 
 10. Install build tools
 $ install build-essential
+
+11. Install and setup Shorewall (firewall)
+$ install shorewall
+# cp etc/shorewall/rules /etc/shorewall/rules
+# cp etc/shorewall/zones /etc/shorewall/zones
+# cp etc/shorewall/interfaces /etc/shorewall/interfaces
+# cp etc/shorewall/policy /etc/shorewall/policy
+
+12. You must enable shorewall by setting startup=1
+# nano /etc/default/shorewall
 
 === Resources ===
 * http://articles.slicehost.com/2007/9/5/debian-etch-setup-page-1
