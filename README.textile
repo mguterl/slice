@@ -1,16 +1,18 @@
 h1. Setup steps
 
-h2. First we add the deploy user. 
+The following step-by-step process outlines how to setup a Rails server on Slicehost using Debian 4.0 and Passenger.
+
+h2. Add the deploy user
 
 type @adduser deploy@
 
 Command will ask you for a new password. Go ahead and choose one. You can safely choose default user information (blank).
 
-Now you need to setup sudo for the deploy user
+Now you need to setup sudo for the deploy user. Enter this command:
 
 @visudo@
 
-Add the following text to bottom of file
+Add the following text to bottom of file:
 
 @deploy ALL=(ALL) ALL@
 
