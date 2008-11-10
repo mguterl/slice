@@ -84,9 +84,6 @@ h2. Ruby installation
 @cd rubygems-1.3.1@
 @sudo ruby setup.rb@
 
-To make the changes take effect
-@source ~/.bash_profile@
-
 h2. Apache installation
 
 @install apache2 apache2-prefork-dev@
