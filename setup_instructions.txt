@@ -1,5 +1,5 @@
 === Steps ===
-1. First we add the deploy user
+1. First we add the deploy user. Command will ask you for a new password. Go ahead and choose one. You can safely choose default user information (blank).
 # adduser deploy
 
 2. Setup sudo for the deploy user
