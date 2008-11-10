@@ -1,32 +1,38 @@
 h1. Setup steps
 
-h2. First we add the deploy user. 
+The following step-by-step process outlines how to setup a Rails server on Slicehost using Debian 4.0 and Passenger.
+
+h2. Add the deploy user
 
 type @adduser deploy@
 
 Command will ask you for a new password. Go ahead and choose one. You can safely choose default user information (blank).
 
-Now you need to setup sudo for the deploy user
+Now you need to setup sudo for the deploy user.
 
-@visudo@
+type @visudo@
 
-Add the following text to bottom of file
+Add the following text to bottom of file:
 
 @deploy ALL=(ALL) ALL@
 
----
+You can confirm you got sudo setup properly by typing @cat /etc/sudoers@ and ensuring that the deploy line you added is at the bottom of the output
 
-3. Copy SSH public key from local machine to server (replace X's with your slice information)
-$ scp ~/.ssh/id_dsa.pub deploy@XXX.XX.XXX.XX:
+h2. SSH public key
 
-4. Add public key to authorized keys and set permissions
-$ mkdir ~/.ssh
-$ touch ~/.ssh/authorized_keys
-$ chmod 600 ~/.ssh/authorized_keys
-$ cat ~/id_dsa.pub >> ~/.ssh/authorized_keys
-$ rm ~/id_dsa.pub
+You need to copy a SSH public key from your local machine to the server. You need to have created SSH key first.
 
-5. Configure the SSH daemon to be more secure
+type @scp ~/.ssh/id_dsa.pub deploy@XXX.XXX.XXX.XXX@ (replace X's with your slice IP) 
+
+Add public key to authorized keys and set permissions
+
+<pre><code>mkdir ~/.ssh
+touch ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+cat ~/id_dsa.pub >> ~/.ssh/authorized_keys
+rm ~/id_dsa.pub</code></pre>
+
+h2. Configure the SSH daemon to be more secure
 $ sudo -s (enter password when prompted)
 # cp etc/ssh/sshd_config /etc/ssh/sshd_config
 # /etc/init.d/ssh restart
