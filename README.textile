@@ -90,8 +90,13 @@ h2. Apache installation
 
 h2. Passenger installation
 
-@sudo /opt/ruby-enterprise-1.8.6-20080810/bin/gem install rake passenger@
-@sudo /opt/ruby-enterprise-1.8.6-20080810/bin/passenger-install-apache2-module@
+@sudo gem install rake passenger@
+@sudo passenger-install-apache2-module@
+
+h2. MySQL installation
+@install mysql-server-5.0 libmysqlclient15-dev@
+@sudo gem install mysql@
+
 === Resources ===
 * http://articles.slicehost.com/2007/9/5/debian-etch-setup-page-1
 * http://articles.slicehost.com/2007/9/5/debian-etch-setup-page-2
