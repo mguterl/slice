@@ -68,7 +68,7 @@ $ install shorewall
 h2. Ruby installation
 
 For some reason I cannot get REE to install with their prebundled runtime, so install ruby is necessary.
-@install ruby ruby1.8-dev irb ri rdoc libopenssl-ruby1.8 zlib1g-dev libssl-dev -y@
+@install ruby ruby1.8-dev irb ri rdoc libopenssl-ruby1.8 zlib1g-dev libssl-dev rubygems -y@
 
 @install wget@
 @mkdir -p ~/src@
@@ -84,8 +84,6 @@ Run the installer and follow the directions.
 
 @./installer@
 
-@remove irb irb1.8 libopenssl-ruby1.8 libreadline-ruby1.8 libruby1.8 rdoc rdoc1.8 ri ri1.8 ruby ruby1.8 ruby1.8-dev@
-
 Edit your .bash_profile in order to put REE in the PATH
 @nano ~/.bash_profile@
 
@@ -95,6 +93,14 @@ Add this line:
 To make the changes take effect
 @source ~/.bash_profile@
 
+h2. Apache installation
+
+@install apache2 apache2-prefork-dev@
+
+h2. Passenger installation
+
+@sudo /opt/ruby-enterprise-1.8.6-20080810/bin/gem install rake passenger@
+@sudo /opt/ruby-enterprise-1.8.6-20080810/bin/passenger-install-apache2-module@
 === Resources ===
 * http://articles.slicehost.com/2007/9/5/debian-etch-setup-page-1
 * http://articles.slicehost.com/2007/9/5/debian-etch-setup-page-2
