@@ -59,6 +59,36 @@ $ install shorewall
 12. You must enable shorewall by setting startup=1
 # nano /etc/default/shorewall
 
+h2. Ruby installation
+
+For some reason I cannot get REE to install with their prebundled runtime, so install ruby is necessary.
+@install ruby ruby1.8-dev irb ri rdoc libopenssl-ruby1.8 zlib1g-dev libssl-dev -y@
+
+@install wget@
+@mkdir -p ~/src@
+@cd ~/src@
+
+You probably want to refer to http://www.rubyenterpriseedition.com/download.html to get the latest version.
+
+@wget http://rubyforge.org/frs/download.php/41040/ruby-enterprise-1.8.6-20080810.tar.gz@
+@tar -xzvf ruby-enterprise-1.8.6-20080810.tar.gz@
+@cd ruby-enterprise-1.8.6-20080810@
+
+Run the installer and follow the directions.  
+
+@./installer@
+
+@remove irb irb1.8 libopenssl-ruby1.8 libreadline-ruby1.8 libruby1.8 rdoc rdoc1.8 ri ri1.8 ruby ruby1.8 ruby1.8-dev@
+
+Edit your .bash_profile in order to put REE in the PATH
+@nano ~/.bash_profile@
+
+Add this line: 
+@export PATH=$PATH:/opt/ruby-enterprise-1.8.6-20080810/bin@
+
+To make the changes take effect
+@source ~/.bash_profile@
+
 === Resources ===
 * http://articles.slicehost.com/2007/9/5/debian-etch-setup-page-1
 * http://articles.slicehost.com/2007/9/5/debian-etch-setup-page-2
