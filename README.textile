@@ -18,22 +18,21 @@ Add the following text to bottom of file:
 
 You can confirm you got sudo setup properly by typing @cat /etc/sudoers@ and ensuring that the deploy line you added is at the bottom of the output
 
----
-
 h2. SSH public key
 
 You need to copy a SSH public key from your local machine to the server. You need to have created SSH key first.
 
 type @scp ~/.ssh/id_dsa.pub deploy@XXX.XXX.XXX.XXX@ (replace X's with your slice IP) 
 
----
+Add public key to authorized keys and set permissions
 
-4. Add public key to authorized keys and set permissions
-$ mkdir ~/.ssh
-$ touch ~/.ssh/authorized_keys
-$ chmod 600 ~/.ssh/authorized_keys
-$ cat ~/id_dsa.pub >> ~/.ssh/authorized_keys
-$ rm ~/id_dsa.pub
+@mkdir ~/.ssh
+touch ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+cat ~/id_dsa.pub >> ~/.ssh/authorized_keys
+rm ~/id_dsa.pub@
+
+
 
 5. Configure the SSH daemon to be more secure
 $ sudo -s (enter password when prompted)
