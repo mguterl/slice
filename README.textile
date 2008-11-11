@@ -124,6 +124,10 @@ Add the following lines:
    PassengerRoot /usr/local/lib/ruby/gems/1.8/gems/passenger-2.0.3
    PassengerRuby /usr/local/bin/ruby</pre>
 
+Restart apache with this command:
+
+@sudo /etc/init.d/apache2 restart@
+
 h2. Sources
 
 * http://articles.slicehost.com/2007/9/5/debian-etch-setup-page-1
