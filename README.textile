@@ -22,9 +22,11 @@ h2. SSH public key
 
 You need to copy a SSH public key from your local machine to the server. You need to have created SSH key first.
 
-type @scp ~/.ssh/id_dsa.pub deploy@XXX.XXX.XXX.XXX@ (replace X's with your slice IP) 
+from your local computer, type @scp ~/.ssh/id_dsa.pub deploy@XXX.XXX.XXX.XXX@ (replace X's with your slice IP) 
 
-Add public key to authorized keys and set permissions
+h3. Add public key to authorized keys and set permissions
+
+Login to the slice using your new 'deploy' user, and enter the following commands:
 
 <pre><code>mkdir ~/.ssh
 touch ~/.ssh/authorized_keys
