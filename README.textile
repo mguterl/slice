@@ -102,7 +102,8 @@ h2. Apache installation
 
 h2. Passenger installation
 
-<pre>sudo gem install rake passenger
+<pre>install zlib
+sudo gem install rake passenger
 sudo passenger-install-apache2-module</pre>
 
 h2. MySQL installation
