@@ -48,13 +48,13 @@ Login as deploy user, and type: @git clone git://github.com/mguterl/slice.git@
 
 h2. Configure the SSH daemon to be more secure
 
-$ sudo -s (enter password when prompted)
-# cp etc/ssh/sshd_config /etc/ssh/sshd_config
-# /etc/init.d/ssh restart
+<pre><code>sudo -s (enter password when prompted)
+cp slice/etc/ssh/sshd_config /etc/ssh/sshd_config
+/etc/init.d/ssh restart</code></pre>
 
 h2. Copy bash settings to your home directory
 
-@cat .bash_profile >> ~/.bash_profile@
+@cat slice/.bash_profile >> ~/.bash_profile@
 @source ~/.bash_profile@
 
 7. update and upgrade installed packages
