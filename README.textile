@@ -88,7 +88,7 @@ tar -jxvf ruby-1.8.6-p111.tar.bz2
 cd ruby-1.8.6-p111
 ./configure --prefix=/usr/local --disable-pthread
 make
-udo make install
+sudo make install
 
 cd ~/src
 wget http://rubyforge.org/frs/download.php/45905/rubygems-1.3.1.tgz
@@ -102,17 +102,15 @@ h2. Apache installation
 
 h2. Passenger installation
 
-@sudo gem install rake passenger@
-@sudo passenger-install-apache2-module@
+<pre>sudo gem install rake passenger
+sudo passenger-install-apache2-module</pre>
 
 h2. MySQL installation
-@install mysql-server-5.0 libmysqlclient15-dev@
-@sudo gem install mysql@
 
-h2. Git installation
-@install git-core@
+<pre>install mysql-server-5.0 libmysqlclient15-dev
+sudo gem install mysql</pre>
 
-=== Resources ===
+h2. Sources
+
 * http://articles.slicehost.com/2007/9/5/debian-etch-setup-page-1
 * http://articles.slicehost.com/2007/9/5/debian-etch-setup-page-2
-
