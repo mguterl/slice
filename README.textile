@@ -2,6 +2,15 @@ h1. Setup steps
 
 The following step-by-step process outlines how to setup a Rails server on Slicehost using Debian 4.0 and Passenger.
 
+h2. Install git
+
+From remote server, type: 
+
+<pre><code>
+sudo aptitude update
+sudo aptitude upgrade
+sudo aptitude install git-core</code</pre>
+
 h2. Add the deploy user
 
 type @adduser deploy@
@@ -39,9 +48,10 @@ $ sudo -s (enter password when prompted)
 # cp etc/ssh/sshd_config /etc/ssh/sshd_config
 # /etc/init.d/ssh restart
 
-6. Copy bash settings to your home directory
-$ cat .bash_profile >> ~/.bash_profile
-$ source ~/.bash_profile
+h2. Copy bash settings to your home directory
+
+@cat .bash_profile >> ~/.bash_profile@
+@source ~/.bash_profile@
 
 7. update and upgrade installed packages
 $ update
