@@ -128,6 +128,29 @@ Restart apache with this command:
 
 @sudo /etc/init.d/apache2 restart@
 
+h2. Setup a rails app
+
+<pre>mkdir ~/apps
+cd ~/apps
+git clone git://github.com/ryw/cincinnati.rb.git
+sudo nano /etc/apache2/sites-available/cincinnatirb</pre>
+
+Add something like this to the config file:
+
+<pre><VirtualHost cincinnatirb.org:80>
+
+  ServerName  cincinatirb.org
+  ServerAlias www.cincinnatirb.org
+
+  DocumentRoot /home/deploy/apps/cincinnati.rb/output
+
+</VirtualHost></pre>
+
+To enable the new site:
+
+<pre>sudo a2ensite cincinnatirb
+sudo /etc/init.d/apache2 reload</pre>
+
 h2. Sources
 
 * http://articles.slicehost.com/2007/9/5/debian-etch-setup-page-1
