@@ -6,8 +6,7 @@ h2. Install git
 
 From remote server, type: 
 
-<pre><code>
-sudo aptitude update
+<pre><code>sudo aptitude update
 sudo aptitude upgrade
 sudo aptitude install git-core</code</pre>
 
