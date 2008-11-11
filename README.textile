@@ -97,6 +97,9 @@ h2. MySQL installation
 @install mysql-server-5.0 libmysqlclient15-dev@
 @sudo gem install mysql@
 
+h2. Git installation
+@install git-core@
+
 === Resources ===
 * http://articles.slicehost.com/2007/9/5/debian-etch-setup-page-1
 * http://articles.slicehost.com/2007/9/5/debian-etch-setup-page-2
