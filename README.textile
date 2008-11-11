@@ -108,7 +108,10 @@ sudo passenger-install-apache2-module</pre>
 h2. MySQL installation
 
 <pre>install mysql-server-5.0 libmysqlclient15-dev
-sudo gem install mysql</pre>
+sudo gem install mysql
+install phpmyadmin</pre>
+
+Visit http://XXX.XXX.XXX.XXX/phpmyadmin/
 
 h2. Sources
 
