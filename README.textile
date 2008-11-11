@@ -54,8 +54,8 @@ cp slice/etc/ssh/sshd_config /etc/ssh/sshd_config
 
 h2. Copy bash settings to your home directory
 
-@cat slice/.bash_profile >> ~/.bash_profile@
-@source ~/.bash_profile@
+<pre><code>cat slice/.bash_profile >> ~/.bash_profile
+source ~/.bash_profile</code></pre>
 
 7. update and upgrade installed packages
 $ update
