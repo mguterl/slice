@@ -64,15 +64,18 @@ sudo dpkg-reconfigure locales
 install screen
 install build-essential</pre>
 
-11. Install and setup Shorewall (firewall)
-$ install shorewall
-# cp etc/shorewall/rules /etc/shorewall/rules
-# cp etc/shorewall/zones /etc/shorewall/zones
-# cp etc/shorewall/interfaces /etc/shorewall/interfaces
-# cp etc/shorewall/policy /etc/shorewall/policy
+h2. Install and setup Shorewall (firewall)
 
-12. You must enable shorewall by setting startup=1
-# nano /etc/default/shorewall
+Enter these commands:
+
+<pre>install shorewall
+cp slice/etc/shorewall/rules /etc/shorewall/rules
+cp slice/etc/shorewall/zones /etc/shorewall/zones
+cp slice/etc/shorewall/interfaces /etc/shorewall/interfaces
+cp slice/etc/shorewall/policy /etc/shorewall/policy
+nano /etc/default/shorewall</pre>
+
+Enable shorewall by setting startup=1 in the configuration
 
 h2. Ruby installation
 
