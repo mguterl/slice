@@ -43,9 +43,11 @@ cat ~/id_dsa.pub >> ~/.ssh/authorized_keys
 rm ~/id_dsa.pub</code></pre>
 
 h2. Copy the setup files to remote server
-Login as deploy user @git clone git://github.com/mguterl/slice.git@
+
+Login as deploy user, and type: @git clone git://github.com/mguterl/slice.git@
 
 h2. Configure the SSH daemon to be more secure
+
 $ sudo -s (enter password when prompted)
 # cp etc/ssh/sshd_config /etc/ssh/sshd_config
 # /etc/init.d/ssh restart
