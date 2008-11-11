@@ -114,6 +114,10 @@ install phpmyadmin</pre>
 
 Visit http://XXX.XXX.XXX.XXX/phpmyadmin/
 
+h2. Setup Passenger
+
+@sudo nano /etc/apache2/apache2.conf@
+
 h2. Sources
 
 * http://articles.slicehost.com/2007/9/5/debian-etch-setup-page-1
