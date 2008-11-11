@@ -79,7 +79,7 @@ Enable shorewall by setting startup=1 in the configuration
 
 h2. Ruby installation
 
-<pre>install wget
+<pre>install wget libssl-dev libreadline5-dev zlib1g-dev
 mkdir -p ~/src
 cd ~/src
 
