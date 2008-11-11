@@ -36,11 +36,11 @@ h3. Add public key to authorized keys and set permissions
 
 Login to the slice using your new 'deploy' user, and enter the following commands:
 
-<pre><code>mkdir ~/.ssh
+<pre>mkdir ~/.ssh
 touch ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 cat ~/id_dsa.pub >> ~/.ssh/authorized_keys
-rm ~/id_dsa.pub</code></pre>
+rm ~/id_dsa.pub</pre>
 
 h2. Copy the setup files to remote server
 
@@ -48,28 +48,21 @@ Login as deploy user, and type: @git clone git://github.com/mguterl/slice.git@
 
 h2. Configure the SSH daemon to be more secure
 
-<pre><code>sudo -s (enter password when prompted)
+<pre>sudo -s (enter password when prompted)
 cp slice/etc/ssh/sshd_config /etc/ssh/sshd_config
-/etc/init.d/ssh restart</code></pre>
+/etc/init.d/ssh restart</pre>
 
 h2. Copy bash settings to your home directory
 
-<pre><code>cat slice/.bash_profile >> ~/.bash_profile
-source ~/.bash_profile</code></pre>
+<pre>cat slice/.bash_profile >> ~/.bash_profile
+source ~/.bash_profile</pre>
 
-7. update and upgrade installed packages
-$ update
-$ upgrade
+h2. Add some other misc. stuff
 
-8. Install and set locales
-$ install locales
-$ sudo dpkg-reconfigure locales
-
-9. Install screen
-$ install screen
-
-10. Install build tools
-$ install build-essential
+<pre>install locales
+sudo dpkg-reconfigure locales
+install screen
+install build-essential</pre>
 
 11. Install and setup Shorewall (firewall)
 $ install shorewall
