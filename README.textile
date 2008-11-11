@@ -137,7 +137,7 @@ sudo nano /etc/apache2/sites-available/cincinnatirb</pre>
 
 Add something like this to the config file:
 
-<pre><VirtualHost cincinnatirb.org:80>
+<pre><VirtualHost *:80>
 
   ServerName  cincinatirb.org
   ServerAlias www.cincinnatirb.org
