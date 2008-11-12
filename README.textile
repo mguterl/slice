@@ -180,12 +180,10 @@ Run @capify .@ to setup capistrano
 Replace config/deploy.rb with the deploy.rb included in this project
 @cap deploy:setup@
 
-FIXME for some reason the directories while created under your home directory are being created/owned by root
-Going to your server and @sudo chown deploy:deploy -R ~/public_html@
+Be sure to create your database prior to running this step.
 @cap deploy:cold@
-FIXME after this runs if you have git submodules you'll need to go into your shared/cached-copy on the server and run
-@git submodule init@
-@git submodule update@
+
+If all goes well you should have a working rails app.  Also, don't forget to setup your DNS entries
 
 h2. Sources
 
