@@ -6,9 +6,18 @@ h2. Install git
 
 From remote server, type: 
 
-<pre>sudo aptitude update
+<pre>
+sudo aptitude update
 sudo aptitude upgrade
-sudo aptitude install git-core</pre>
+sudo aptitude install wget build-essential gettext zlib1g-dev
+cd ~/src
+wget http://www.kernel.org/pub/software/scm/git/git-1.6.0.4.tar.gz
+tar -xzvf git-1.6.0.4.tar.gz
+cd git-1.6.0.4
+./configure --prefix=/usr/local
+make
+sudo make install
+</pre>
 
 h2. Add the deploy user
 
@@ -161,6 +170,17 @@ To enable the new site:
 
 <pre>sudo a2ensite cincinnatirb
 sudo /etc/init.d/apache2 reload</pre>
+
+h2. Capistrano
+
+On your local machine cd to your current project directory.
+Run @capify .@ to setup capistrano
+Replace config/deploy.rb with the deploy.rb included in this project
+@cap deploy:setup@
+
+FIXME for some reason the directories while created under your home directory are being created/owned by root
+Going to your server and @sudo chown deploy:deploy -R ~/public_html@
+@cap deploy:cold@
 
 h2. Sources
 
