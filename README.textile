@@ -130,6 +130,10 @@ Restart apache with this command:
 
 h2. Setup a rails app
 
+Install rails:
+
+@sudo gem install rails@
+
 <pre>mkdir ~/apps
 cd ~/apps
 git clone git://github.com/ryw/cincinnati.rb.git
