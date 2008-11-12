@@ -143,10 +143,17 @@ Add something like this to the config file:
 
 <pre><VirtualHost *:80>
 
-  ServerName  cincinatirb.org
-  ServerAlias www.cincinnatirb.org
+  ServerName  mysite.com
+  ServerAlias www.mysite.com
 
-  DocumentRoot /home/deploy/apps/cincinnati.rb/output
+  DocumentRoot /home/deploy/apps/mysite/public
+
+  <Directory "/home/deploy/apps/mysite/public">
+    Options FollowSymLinks
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+  </Directory>
 
 </VirtualHost></pre>
 
